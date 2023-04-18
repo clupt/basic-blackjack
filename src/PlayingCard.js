@@ -1,21 +1,31 @@
-// const CARDS = ['https://deckofcardsapi.com/static/img/9H.png'];
-import {getDeck, drawAndShowCard } from "./DeckOfCards";
-let cards;
+const BASE_IMAGE = "https://deckofcardsapi.com/static/img/";
+// import {getDeck, drawAndShowCard } from "./DeckOfCards";
+const CARD_VALUES = [
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "J",
+  "Q",
+  "K",
+  "A"
+];
+const CARD_SUITS = ["C", "H", "S", "D"];
 
-async function cardsGetter(){
-  const res = await getDeck();
-  cards = res;
-}
-console.log("cards=", cards);
-cardsGetter();
 
-function PlayingCard() {
-  // const deck = getDeck();
+function PlayingCard({ value = "Queen", suit = "clubs" }) {
   return (
     <div>
-      <p>{ cards ? cards[0].suit : 'Nope'}</p>
+      <p>
+        {value} of {suit}
+      </p>
     </div>
-  )
+  );
 }
 
-export default PlayingCard
+export default PlayingCard;

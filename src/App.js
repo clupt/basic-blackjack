@@ -1,10 +1,14 @@
-import './App.css';
+import "./App.css";
 import PlayingCard from "./PlayingCard";
 
-function App() {
-  return (
-    <div className="App"> <PlayingCard /> </div>
-  );
-}
 
+function App() {
+  if ("") {
+    return (
+      <div className="App">
+        <PlayingCard />
+      </div>
+    );
+  }
+}
 export default App;

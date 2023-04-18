@@ -19,10 +19,6 @@ async function drawAndShowCard(deck){
   return [card1, card2];
 }
 
-function DeckOfCards(){
-  return (
-    <p>getDeck()</p>
-  )
-}
+
 
 export { getDeck, drawAndShowCard };
